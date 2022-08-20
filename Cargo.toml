@@ -1,0 +1,20 @@
+[package]
+name = "fhackit"
+version = "0.1.0"
+edition = "2021"
+
+[profile.dev]
+opt-level = 0
+
+[profile.release]
+opt-level = 3
+strip = "symbols"
+debug-assertions = false
+lto = true
+debug = false
+
+
+[dependencies]
+relative-path = "1.7.2"
+goblin = "0.5"
+
